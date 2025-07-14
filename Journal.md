@@ -38,4 +38,5 @@ Solution:
 
 With this fix, it has created a new problem of the strips being to far off to the side. To fix this, I simply measure the distance between the pinchers and the center of the strips, and make them centered with one another.
 
+<img width="655" height="428" alt="Screenshot 2025-07-14 143656" src="https://github.com/user-attachments/assets/0b332710-92af-4342-8339-bf39206af1f5" />
 
