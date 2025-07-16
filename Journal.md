@@ -41,3 +41,8 @@ With this fix, it has created a new problem of the strips being to far off to th
 <img width="655" height="428" alt="Screenshot 2025-07-14 143656" src="https://github.com/user-attachments/assets/0b332710-92af-4342-8339-bf39206af1f5" />
 
 Now that the problem was solved, I decided to continue working on the second arm. I made the second part of the arm but i relized the arm is already too long so i decided to make the first part of the arm shorter by 2 in. This worked pretty well. Next, I started to make the claw that holds the bottle. 
+Here are photos of all the parts I made for the claw:
+
+<img width="267" height="197" alt="Screenshot 2025-07-14 160221" src="https://github.com/user-attachments/assets/849d3cb1-b497-4e0f-b2c2-e0af718780da" />
+<img width="278" height="258" alt="Screenshot 2025-07-14 160240" src="https://github.com/user-attachments/assets/a63946a5-e3e6-4583-80dd-f5b985167145" />
+<img width="488" height="353" alt="Screenshot 2025-07-14 160551" src="https://github.com/user-attachments/assets/c135d49a-98db-4ae9-b297-7abd8410991d" />
