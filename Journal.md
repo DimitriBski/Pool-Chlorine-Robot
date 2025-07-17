@@ -46,3 +46,9 @@ Here are photos of all the parts I made for the claw:
 <img width="267" height="197" alt="Screenshot 2025-07-14 160221" src="https://github.com/user-attachments/assets/849d3cb1-b497-4e0f-b2c2-e0af718780da" />
 <img width="278" height="258" alt="Screenshot 2025-07-14 160240" src="https://github.com/user-attachments/assets/a63946a5-e3e6-4583-80dd-f5b985167145" />
 <img width="488" height="353" alt="Screenshot 2025-07-14 160551" src="https://github.com/user-attachments/assets/c135d49a-98db-4ae9-b297-7abd8410991d" />
+
+Day 3 7/15/25
+I was unable to work today since I was very busy.
+
+Day 4 7/16/25
+I decided to add another layer where all the wires would feed down to the ardino. The reason I decided to make a second layer was because it I had pu the ardino next to the arms, it would be more prone to damage. 
