@@ -51,4 +51,151 @@ Day 3 7/15/25
 I was unable to work today since I was very busy.
 
 Day 4 7/16/25
-I decided to add another layer where all the wires would feed down to the ardino. The reason I decided to make a second layer was because it I had pu the ardino next to the arms, it would be more prone to damage. 
+I decided to add another layer where all the wires would feed down to the ardino. The reason I decided to make a second layer was because it I had put the ardino next to the arms, it would be more prone to damage. 
+
+Day 5-13 7/17/25 - 7/25/25
+I started to work on coding the robot. First, i needed to figure out what language I was going to use as I mainly use python. I figured out that for programing arduinos I need to use C++ language. But before I could start any of the coding, I learned that It would be inpossible to power all 10 motors directly from the arduino. This means I can connect them to the arduino for signals but not for power. So they will all need an external power source. And I have also not determined a power source for thr robot yet. But then I remembered that I have a power bank. So I caan use my 20000mah power bank to power the whole robot. Another problem I ran into though is that I will most likely need a voltage regulator as the voltage wont match from the motors and arduino to the powerbank. Here is the code I wrote so far:
+#include <Wire.h>
+#include <Adafruit_TCS34725.h>
+#include <Adafruit_PWMServoDriver.h>
+
+#define L_MOTOR_IN1 8
+#define L_MOTOR_IN2 7
+#define R_MOTOR_IN3 4
+#define R_MOTOR_IN4 5
+#define L_MOTOR_PWM 9
+#define R_MOTOR_PWM 3
+
+#define CAMERA_TRIGGER_PIN 2
+
+// Servo channels on PCA9685
+#define ARM1_BASE 0
+#define ARM1_ELBOW 1
+#define ARM1_WRIST 2
+#define ARM2_BASE 3
+#define ARM2_ELBOW 4
+#define ARM2_DISPENSER 5
+
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+Adafruit_TCS34725 colorSensor = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);
+
+void setup() {
+  Serial.begin(9600);
+
+  // Motor pins
+  pinMode(L_MOTOR_IN1, OUTPUT);
+  pinMode(L_MOTOR_IN2, OUTPUT);
+  pinMode(R_MOTOR_IN3, OUTPUT);
+  pinMode(R_MOTOR_IN4, OUTPUT);
+  pinMode(CAMERA_TRIGGER_PIN, OUTPUT);
+  digitalWrite(CAMERA_TRIGGER_PIN, LOW);
+
+  pwm.begin();
+  pwm.setPWMFreq(50); // 50Hz for servos
+
+  if (!colorSensor.begin()) {
+    Serial.println("Color sensor not found!");
+    while (1);
+  }
+
+  Serial.println("Robot Starting...");
+}
+
+void loop() {
+  // Step 1: Move forward
+  driveForward(150);
+  delay(2000);
+  stopMotors();
+
+  // Step 2: Dip strip with first arm
+  dipTestStrip();
+
+  // Step 3: Trigger ESP32-CAM to take photo
+  triggerCamera();
+
+  // Step 4: Read chlorine color from strip
+  delay(1000); // wait for lighting to stabilize
+  float r, g, b;
+  colorSensor.getRGB(&r, &g, &b);
+
+  Serial.print("RGB: ");
+  Serial.print(r); Serial.print(", ");
+  Serial.print(g); Serial.print(", ");
+  Serial.println(b);
+
+  // Step 5: Compare RGB to chlorine threshold
+  if (isChlorineLow(r, g, b)) {
+    Serial.println("Low chlorine detected. Dispensing...");
+    dispenseChlorine();
+  } else {
+    Serial.println("Chlorine level OK.");
+  }
+
+  while (true); // Stop here after 1 cycle
+}
+
+// ================= Movement =================
+void driveForward(int speed) {
+  digitalWrite(L_MOTOR_IN1, HIGH);
+  digitalWrite(L_MOTOR_IN2, LOW);
+  analogWrite(L_MOTOR_PWM, speed);
+
+  digitalWrite(R_MOTOR_IN3, HIGH);
+  digitalWrite(R_MOTOR_IN4, LOW);
+  analogWrite(R_MOTOR_PWM, speed);
+}
+
+void stopMotors() {
+  digitalWrite(L_MOTOR_IN1, LOW);
+  digitalWrite(L_MOTOR_IN2, LOW);
+  digitalWrite(R_MOTOR_IN3, LOW);
+  digitalWrite(R_MOTOR_IN4, LOW);
+}
+
+// ================= Arm Controls =================
+void dipTestStrip() {
+  pwm.setPWM(ARM1_BASE, 0, angleToPulse(90));
+  delay(500);
+  pwm.setPWM(ARM1_ELBOW, 0, angleToPulse(120));
+  delay(1000);
+  pwm.setPWM(ARM1_WRIST, 0, angleToPulse(150));
+  delay(3000); // wait for dip
+  pwm.setPWM(ARM1_WRIST, 0, angleToPulse(90)); // retract
+  delay(500);
+}
+
+// ================= Chlorine Logic =================
+bool isChlorineLow(float r, float g, float b) {
+  // Simple threshold – tune based on test strip readings
+  return (r > 160 && g < 100 && b < 80);  // Low chlorine: more red
+}
+
+void dispenseChlorine() {
+  pwm.setPWM(ARM2_BASE, 0, angleToPulse(90));
+  delay(500);
+  pwm.setPWM(ARM2_ELBOW, 0, angleToPulse(110));
+  delay(800);
+  pwm.setPWM(ARM2_DISPENSER, 0, angleToPulse(160)); // Pour
+  delay(1500);
+  pwm.setPWM(ARM2_DISPENSER, 0, angleToPulse(90)); // Reset
+  delay(500);
+}
+
+// ================= Camera Trigger =================
+void triggerCamera() {
+  digitalWrite(CAMERA_TRIGGER_PIN, HIGH);
+  delay(300);
+  digitalWrite(CAMERA_TRIGGER_PIN, LOW);
+  Serial.println("Camera triggered.");
+}
+
+// ================= Helpers =================
+int angleToPulse(int angle) {
+  int pulse = map(angle, 0, 180, 102, 512);  // Map angle to PCA9685 pulse
+  return pulse;
+}
+
+
+Day 14 7/26/25
+Today I made the mount for the color sensor. I placed it ontop of the 1st arm base so that it has a clear shot of the strip when it is brought up. 
+<img width="239" height="406" alt="Screenshot 2025-07-26 145223" src="https://github.com/user-attachments/assets/d0fba385-44eb-473f-8d2c-bde80f2bc20e" />
