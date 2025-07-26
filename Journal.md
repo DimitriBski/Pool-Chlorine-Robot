@@ -16,6 +16,8 @@ The second arm will grab the chlorine bottle thats sitting on the designated spo
 Then it will flip the bottle upside down. Next, the upper part of the arm will unscrew the cap and the chlorine will be dumped into the pool. 
 Now, the arm will bring the bottle to the trashcan and then the robot will drive back to its designated spot. 
 
+DISCLAIMER: I know that there are no motors or wheels in the CAD model I made. The reasoning for this is because of two reasons. The first reason is that I started this project late and didn't have much time to make them. The second reason is I think its unnessasary as I already have the mounting brackets showing where the motors will be. As for the wheels, there is no motor for them to attach to so I just didnt make them.
+
 Day 1 7/13/25:
 This is the first day that I started my project. I only have 2.5 weeks to submit my designs so I started working. 
 First off, before I cadded anything, I designed what I wanted my robot to look like on paper first. I drew different angles of it to referance for my CAD model later. Heres my original design:
