@@ -11,17 +11,29 @@ My plan is to design a robot that automates the task of checking your pool's chl
 DISCLAIMER: I know that there are no motors or wheels in the CAD model I made. The reasoning for this is because of two reasons. The first reason is that I started this project late and didn't have much time to make them. The second reason is I think its unnessasary as I already have the mounting brackets showing where the motors will be. As for the wheels, there is no motor for them to attach to so I just didnt make them.
 
 Parts Needed:
+
 Aluminium (For the Frame)
+
 DC Gear Motors 2x
+
 Servo Motors 4x
+
 Wheels 4x
+
 Voltage Regulator 1x
+
 Motor Driver 1x
+
 Arduino Board 1x
+
 Power Bank 20,000mah 1x
+
 16 Gauge Wire 15 ft Roll 1x
+
 Arduino Color Sensor 1x
+
 3d Printer w/ filament
+
 Screws and bolts
 
 Day 1 7/13/25:
