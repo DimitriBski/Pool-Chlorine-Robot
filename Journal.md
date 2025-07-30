@@ -6,17 +6,23 @@ created_at: "2025-07-14"
 ---
 
 What I'm Building:
-My plan is to design a robot that automates the task of checking your pool's chlorine levels and adding chlorine to the pool. 
-First off, the robot drives up to the edge of the pool. It knows when it stop because the sensor on the front dectecs when the depth of the ground beneath the robot changes. 
-Next, the 1st arm of the robot grabs a chlorine strip tester and dips it into the pool. The camera mounted above the axle of the arm will observe the strip. 
-Depending on the color of the strip, the robot will decide whether or not to dump chlorine into the pool. 
-If it doesn't need chlorine, the robot will pace the strip into the mounded trashcan and drive back to it's orginal parking spot. 
-If the pool needs chlorine, the robot will still place the strip into the trash can, but now its going to send a signal to the second arm. 
-The second arm will grab the chlorine bottle thats sitting on the designated spot ontop of the robot. It will move the bottle so that its now above the pool. 
-Then it will flip the bottle upside down. Next, the upper part of the arm will unscrew the cap and the chlorine will be dumped into the pool. 
-Now, the arm will bring the bottle to the trashcan and then the robot will drive back to its designated spot. 
+My plan is to design a robot that automates the task of checking your pool's chlorine levels and adding chlorine to the pool. First off, the robot drives up to the edge of the pool. It knows when it stop because the sensor on the front dectecs when the depth of the ground beneath the robot changes. Next, the 1st arm of the robot grabs a chlorine strip tester and dips it into the pool. The camera mounted above the axle of the arm will observe the strip. Depending on the color of the strip, the robot will decide whether or not to dump chlorine into the pool. If it doesn't need chlorine, the robot will pace the strip into the mounded trashcan and drive back to it's orginal parking spot. If the pool needs chlorine, the robot will still place the strip into the trash can, but now its going to send a signal to the second arm. The second arm will grab the chlorine bottle thats sitting on the designated spot ontop of the robot. It will move the bottle so that its now above the pool. Then it will flip the bottle upside down. Next, the upper part of the arm will unscrew the cap and the chlorine will be dumped into the pool. Now, the arm will bring the bottle to the trashcan and then the robot will drive back to its designated spot. 
 
 DISCLAIMER: I know that there are no motors or wheels in the CAD model I made. The reasoning for this is because of two reasons. The first reason is that I started this project late and didn't have much time to make them. The second reason is I think its unnessasary as I already have the mounting brackets showing where the motors will be. As for the wheels, there is no motor for them to attach to so I just didnt make them.
+
+Parts Needed:
+Aluminium (For the Frame)
+DC Gear Motors 2x
+Servo Motors 4x
+Wheels 4x
+Voltage Regulator 1x
+Motor Driver 1x
+Arduino Board 1x
+Power Bank 20,000mah 1x
+16 Gauge Wire 15 ft Roll 1x
+Arduino Color Sensor 1x
+3d Printer w/ filament
+Screws and bolts
 
 Day 1 7/13/25:
 This is the first day that I started my project. I only have 2.5 weeks to submit my designs so I started working. 
@@ -201,3 +207,6 @@ int angleToPulse(int angle) {
 Day 14 7/26/25
 Today I made the mount for the color sensor. I placed it ontop of the 1st arm base so that it has a clear shot of the strip when it is brought up. 
 <img width="239" height="406" alt="Screenshot 2025-07-26 145223" src="https://github.com/user-attachments/assets/d0fba385-44eb-473f-8d2c-bde80f2bc20e" />
+
+Day 15-17 7/27/25 - 7/29/25
+For the past 3 days, I've basically been going through all my documentation and CAD files to makes sure that everything meest the criteria and that everything is how I want it before my final submission. The only thing I really added was my parts list. 
