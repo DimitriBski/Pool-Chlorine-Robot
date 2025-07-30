@@ -36,6 +36,8 @@ Arduino Color Sensor 1x
 
 Screws and bolts
 
+Time Spent: 10 Hours
+
 Day 1 7/13/25:
 This is the first day that I started my project. I only have 2.5 weeks to submit my designs so I started working. 
 First off, before I cadded anything, I designed what I wanted my robot to look like on paper first. I drew different angles of it to referance for my CAD model later. Heres my original design:
