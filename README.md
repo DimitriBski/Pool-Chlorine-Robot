@@ -36,16 +36,3 @@ I built this project to automate the annoying process of checking pool chlorine 
 ### Full CAD Model Photo:
 <img width="410" height="307" alt="Screenshot 2025-07-30 212948" src="https://github.com/user-attachments/assets/a015a29a-d7e8-4069-8a50-05d63b61e67f" />
 ---
-
-## BOM (Bill of Materials)
-
-| Item | Description | Quantity | Link |
-|------|-------------|----------|------|
-| Arduino Uno | Microcontroller | 1 | [Link](https://store.arduino.cc/products/arduino-uno-rev3) |
-| ESP32-CAM | Camera module | 1 | [Link](https://www.amazon.com/dp/B08D3W5HRM) |
-| Color Sensor | TCS34725 or similar | 1 | [Link](https://www.adafruit.com/product/1334) |
-| 9g Servos | For both arms | 2 | [Link](https://www.amazon.com/dp/B07K9WZX9J) |
-| 2WD Tank Kit | With motors and wheels | 1 | [Link](https://www.amazon.com/dp/B00P7S2B6S) |
-| 20000mAh Power Bank | Power source | 1 | [Link](https://www.anker.com/products/a1271) |
-| Jumper Wires | Male/Female | — | [Link](https://www.amazon.com/dp/B01EV70C78) |
-| Test Strips | For chlorine testing | — | [Link](https://www.amazon.com/dp/B086X9TXPZ) |
