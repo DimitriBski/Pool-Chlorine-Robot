@@ -1,0 +1,9 @@
+Part Name,Quantity,Description,Link
+Arduino Uno,1,Main microcontroller,https://store.arduino.cc/products/arduino-uno-rev3
+ESP32-CAM,1,Camera and Wi-Fi module,https://www.amazon.com/dp/B09XK29P6F
+Color Sensor,1,TCS34725 sensor,https://www.adafruit.com/product/1334
+DC 12V Motor,2,Drive motors,https://www.pololu.com/product/157
+L298N Motor Driver,1,Controls motors,https://www.amazon.com/dp/B0758BKVQK
+Power Bank,1,20000mAh battery,https://www.anker.com/products/a1287011
+Voltage Regulator,1,Step-down module,https://www.amazon.com/dp/B01MQGMOKI
+Wheel,2,Drive wheels,https://www.amazon.com/dp/B07GXZ4H9T
