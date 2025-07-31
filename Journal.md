@@ -191,5 +191,10 @@ int angleToPulse(int angle) {
   <h2>Day 15-17 - July 27–29, 2025</h2>
   <p>For the past 3 days, I've basically been going through all my documentation and CAD files to makes sure that everything meest the criteria and that everything is how I want it before my final submission. The only thing I really added was my parts list.</p>
 
+ <h2>Day 18 - July 30, 2025</h2>
+  <p>Today is the 2nd to last day before my project is due. I went to submit my project but I was told that my journal needs to be formatted correctly, I need to add electronics and motors into my CAD assembly, and I need a README and a step file of my CAD. So today, I finished working on my Cad model. Next, I needed to make a readme. So I reasearched how to make it and followed the instructions. Now all I need to do is make my CAD model into a step file and make a 
+
+ <h2>Day 19 - July 31, 2025</h2>
+  <p>Today is the last day to submit the prject. All of the files are completed and ready to submit. So all I have to do now is submit it.
 </body>
 </html>
